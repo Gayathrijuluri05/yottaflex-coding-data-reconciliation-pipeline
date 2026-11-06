@@ -1,0 +1,132 @@
+# Data Reconciliation Pipeline – AI Prompt History
+
+## Initial Project Instructions
+
+### Prompt 1: Defining the AI Assistant's Role
+
+Act as my Senior Python Developer, Data Engineer, and Technical Mentor. I am going to develop a Data Reconciliation Pipeline project from scratch.
+
+Your responsibility is to guide me through the complete implementation process step by step, from understanding the requirements to final testing and documentation.
+
+Follow these instructions throughout the development:
+
+1. Understand the project requirements before suggesting implementation.
+2. Help me design a scalable and modular project architecture.
+3. Guide me through implementation in a logical sequence rather than generating the entire project at once.
+4. Provide clean, readable, modular, and maintainable Python code.
+5. Explain the purpose of each module and how different components interact.
+6. Consider real-world data engineering scenarios, including large datasets, missing values, duplicate records, invalid data, and data mismatches.
+7. Help me integrate SQLite for storing execution history and reconciliation results.
+8. Implement proper logging, exception handling, and validation.
+9. Help me test each component before moving to the next implementation stage.
+10. Whenever I encounter an error, analyze the root cause and suggest a solution without unnecessarily changing the existing implementation.
+11. Ensure that the final pipeline supports command-line execution and generates structured reconciliation reports.
+12. Do not skip implementation steps or assume that a feature is completed without verification.
+
+I will share the project requirements, existing code, execution outputs, and errors as we progress. Guide me like a technical mentor throughout the development.
+
+---
+
+### Prompt 2: Understanding Project Requirements
+
+I need to develop a Data Reconciliation Pipeline using Python. The objective is to compare source and target datasets, identify missing records, detect field-level mismatches, validate data quality, and generate reconciliation reports.
+
+Analyze the requirements and help me divide the project into implementation phases. Suggest the architecture, essential components, technologies, and expected outputs.
+
+### Prompt 3: Project Architecture
+
+Based on the requirements, design a modular Python project structure. Separate the implementation into appropriate modules for configuration, data loading, validation, reconciliation, database operations, reporting, and execution.
+
+Explain the responsibility of each module and the interaction between them.
+
+### Prompt 4: Environment Setup
+
+Help me configure the Python development environment and identify the required dependencies. Create a requirements.txt file for data processing, CSV handling, database operations, and reporting.
+
+### Prompt 5: Input Data Handling
+
+Implement Python functionality to load source and target CSV files dynamically using file paths. Handle missing files, empty datasets, unsupported formats, and encoding issues.
+
+### Prompt 6: Large Dataset Handling
+
+Modify the data loading implementation to handle large datasets efficiently. Consider memory consumption and processing reliability for datasets containing 100,000+ records.
+
+### Prompt 7: Data Validation
+
+Implement validation checks for source and target datasets, including null values, duplicate primary keys, missing required columns, invalid data types, and malformed records.
+
+### Prompt 8: Rejected Records
+
+Create a mechanism to separate valid and rejected records. Store rejected records with appropriate rejection reasons for further investigation.
+
+### Prompt 9: SQLite Integration
+
+Integrate SQLite into the pipeline. Design database tables to store execution details, validation results, reconciliation results, and mismatch information.
+
+### Prompt 10: Database Persistence
+
+Implement database initialization and persistence logic. Ensure that repeated executions retain previous execution history instead of unintentionally overwriting results.
+
+### Prompt 11: Record-Level Reconciliation
+
+Implement record-level reconciliation using a unique business key. Identify records existing only in the source, records existing only in the target, and records present in both datasets.
+
+### Prompt 12: Field-Level Reconciliation
+
+Extend the reconciliation logic to compare matching records field by field. Capture mismatched columns along with their corresponding source and target values.
+
+### Prompt 13: Data Normalization and Comparison
+
+Handle null values, whitespace, case differences, and data type inconsistencies appropriately. Make comparison rules consistent and configurable where necessary.
+
+### Prompt 14: Mismatch Classification
+
+Implement separate classifications for missing records, extra records, key mismatches, and field-level mismatches. Store the mismatch category, business key, column name, source value, and target value.
+
+### Prompt 15: Reconciliation Summary
+
+Generate summary statistics containing total records processed, valid records, rejected records, matched records, missing records, extra records, and field-level mismatches.
+
+### Prompt 16: Execution Management
+
+Implement a unique execution ID for every pipeline run. Track the execution start time, end time, status, and summary statistics.
+
+### Prompt 17: Report Generation
+
+Generate structured CSV reports for reconciliation results, rejected records, and mismatch details. Organize the reports inside an output directory.
+
+### Prompt 18: Execution Status
+
+Implement PASS/FAIL status logic based on configured validation and reconciliation rules. Ensure that discrepancies are accurately reflected in the final execution status.
+
+### Prompt 19: Command-Line Interface
+
+Create a command-line interface using Python argparse. Allow users to specify source file, target file, database path, and output directory.
+
+### Prompt 20: Argument Validation
+
+Validate command-line arguments and provide meaningful error messages for invalid paths, missing arguments, and unsupported input files.
+
+### Prompt 21: Functional Testing
+
+Test the complete pipeline using sample datasets containing matching records, missing records, extra records, duplicate keys, null values, and field-level differences.
+
+### Prompt 22: Debugging
+
+Analyze execution errors and unexpected results in the current implementation. Identify root causes and suggest corrections without unnecessarily changing the existing project architecture.
+
+### Prompt 23: Result Verification
+
+Verify whether record counts, mismatch classifications, rejected records, database entries, and generated reports are consistent with the input datasets.
+
+### Prompt 24: Performance Optimization
+
+Review the pipeline for performance when processing datasets containing approximately 100,000 records or more. Identify inefficient operations and suggest optimizations without affecting reconciliation accuracy.
+
+### Prompt 25: Final Code Review
+
+Review the complete project implementation, including module integration, exception handling, database persistence, report generation, command-line execution, and output consistency.
+
+### Prompt 26: Final Documentation
+
+Prepare a comprehensive README.md containing the project overview, architecture, technology stack, directory structure, installation instructions, execution commands, features, and sample output.
