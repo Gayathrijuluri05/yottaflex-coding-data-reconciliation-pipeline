@@ -121,3 +121,4 @@ volumes, use database-side joins/aggregations, partitioned files, and incrementa
 - `tests/`: happy path, empty input, malformed rows, duplicates, nulls, domain boundaries,
   schema drift, and idempotency.
 - `data/sample/`: generated starter CSVs (created by the quick-start command).
+
