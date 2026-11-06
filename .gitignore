@@ -1,0 +1,34 @@
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+fde_venv/
+.venv/
+
+# Generated datasets
+data/
+*.csv
+*.json
+
+# Generated reports and logs
+reports/
+*.log
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Test cache
+.pytest_cache/
+.coverage
+
+# IDE settings
+.vscode/
+.idea/
+
+# Environment variables
+.env
